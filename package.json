@@ -1,0 +1,53 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "keywords": [
+    "algorithms",
+    "bubble-sort",
+    "heap sort",
+    "insertion sort",
+    "merge sort",
+    "selection sort"
+  ],
+  "author": "Aris Kemper <aris.github@gmail.com>",
+  "license": "MIT",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "doc": "rm -R ./doc && typedoc --tsconfig ./tsconfig.json",
+    "lint": "eslint -f unix \"src/**/*.{ts,tsx}\"",
+    "lint:fix": "eslint --fix \"src/**/*.{ts,tsx}\"",
+    "clean": "rm -rf ./dist ./coverage"
+  },
+  "devDependencies": {
+    "@swc/jest": "0.2.29",
+    "@types/jest": "29.5.4",
+    "@typescript-eslint/eslint-plugin": "6.6.0",
+    "@typescript-eslint/parser": "6.6.0",
+    "eslint": "8.48.0",
+    "eslint-plugin-tsdoc": "0.2.17",
+    "jest": "29.6.4",
+    "ts-jest": "29.1.1",
+    "typedoc": "0.25.1",
+    "typescript": "5.2.2"
+  },
+  "jest": {
+    "transform": {
+      ".ts$": [
+        "@swc/jest"
+      ]
+    },
+    "testRegex": "algorithms/.*/.*\\.spec\\.ts$",
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}

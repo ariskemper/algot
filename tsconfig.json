@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es2016",
+    "sourceMap": true,
+    "outDir": "dist",
+    "module": "CommonJS",
+    "rootDir": "src",
+    "skipLibCheck": true,
+    "noEmitOnError": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
