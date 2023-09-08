@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - node
+install:
+  - npm install
+script:
+  - npm run ci
+after_success:
+  - npm run test:cov
+  - test $TRAVIS_BRANCH = "master" && test $TRAVIS_PULL_REQUEST = "false" --non-interactive
+notifications:
+  email:
+    on_failure: change
+    on_success: change
