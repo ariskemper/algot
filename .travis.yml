@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 17
+install:
+  - npm install
+script:
+  - npm run ci
+after_success:
+  - npm run test:cov
+notifications:
+  email:
+    on_failure: change
+    on_success: change
