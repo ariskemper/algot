@@ -1,6 +1,7 @@
 Algorithms in TypeScript
 =====================================
 [![Build Status](https://app.travis-ci.com/ariskemper/algorithms.svg?branch=main)](https://app.travis-ci.com/ariskemper/algorithms)
+[![Known Vulnerabilities](https://snyk.io/test/github/ariskemper/algorithms/badge.svg)](https://snyk.io/test/github/ariskemper/algorithms)
 
 ## Installing
 * Install [Node](https://nodejs.org)
