@@ -8,7 +8,8 @@
     "heap sort",
     "insertion sort",
     "merge sort",
-    "selection sort"
+    "selection sort",
+    "counting sort"
   ],
   "author": "Aris Kemper <aris.github@gmail.com>",
   "license": "MIT",
@@ -16,6 +17,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
+    "test:v": "jest --verbose",
     "test:cov": "jest --coverage",
     "doc": "rm -R ./doc && typedoc --tsconfig ./tsconfig.json",
     "lint": "eslint -f unix \"src/**/*.{ts,tsx}\"",
