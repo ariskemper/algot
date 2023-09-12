@@ -1,6 +1,10 @@
 import { compare, swap } from '../../utils'
 
 /**
+ * Selection Sort finds the minimum element in the array and swaps it with the
+ * first element. Then finds the second minimum element and swaps it with
+ * the second element, and so on.
+ *
  * Time Complexity
  * - Best Case: O(n^2) - Even if the array is already sorted, the algorithm
  * still goes through all elements for each element in the array because it

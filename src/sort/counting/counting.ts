@@ -1,5 +1,10 @@
 
 /**
+ *
+ * Counting Sort counts the number of occurrences of each value in the array and
+ * then uses these counts to compute the position of each element in the sorted
+ * array.
+ *
  * Time Complexity
  * The time complexity of the counting sort algorithm is O(n+k), where:
  * - n is the number of elements in the input array

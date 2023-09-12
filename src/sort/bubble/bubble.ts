@@ -1,6 +1,9 @@
 import { compare, swap } from '../../utils'
 
 /**
+ * Bubble Sort compares adjacent elements and swaps them if they are in the
+ * wrong order. This process is repeated until the array is sorted.
+ *
  * Time Complexity
  * - Worst Case: O(n^2) -This occurs when the input array is in reverse order.
  * In each iteration of the outer loop, the inner loop will compare and
