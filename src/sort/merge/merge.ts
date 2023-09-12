@@ -1,6 +1,9 @@
 import { compare } from '../../utils'
 
 /**
+ * Merge Sort is a divide-and-conquer algorithm that divides the array into
+ * smaller pieces, sorts each piece, and then merges them back together.
+ *
  * Time Complexity
  * - Best Case: O(n log n) - Even in the best case, the array needs to be split
  * down and merged back, requiring n log n operations.

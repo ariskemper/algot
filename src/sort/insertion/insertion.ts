@@ -1,6 +1,10 @@
 import { compare } from '../../utils'
 
 /**
+ * Builds a sorted array one element at a time by repeatedly picking the next
+ * element and inserting it into its correct position in the sorted portion of
+ * the array.
+ *
  * Time Complexity
  * - Best Case: O(n) - This is the scenario where the input array is already
  * sorted.The algorithm only needs to go through the array once, hence linear

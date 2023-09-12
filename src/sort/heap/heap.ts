@@ -1,6 +1,11 @@
 import { compare, swap } from '../../utils'
 
 /**
+ *
+ * Heap Sort builds a binary heap data structure from the array and then
+ * repeatedly extracts the maximum element from the heap until it is empty,
+ * thereby obtaining a sorted array.
+ *
  * Time Complexity
  * - The time complexity of the heap sort algorithm is O(n log n), where n is the
  * number of elements in array. This complecity is applicable for the best,
