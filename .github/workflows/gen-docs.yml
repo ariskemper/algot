@@ -1,12 +1,13 @@
 name: Generate Docs
 
 on:
-  push:
+  pull_request:
     branches: [ "main" ]
+    types: ["closed"]
 
 jobs:
-  build:
-
+  gen-docs:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     strategy:
