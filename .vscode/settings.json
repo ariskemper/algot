@@ -3,5 +3,13 @@
     80,
     120
   ],
-  "eslint.validate": ["typescript", "typescriptreact"]
+  "eslint.validate": [
+    "typescript",
+    "typescriptreact"
+  ],
+  "cSpell.words": [
+    "Codecov",
+    "commiter",
+    "automerge"
+  ]
 }
