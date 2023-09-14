@@ -31,6 +31,7 @@ jobs:
         commit-message: "Create pull request for generated documentation"
         commiter: "Aris Kemper <aris.github@gmail.com"
         branch: create-pull-request/gen-docs
+        title: "Generated documentation"
     - name: Enable pull request auto merge
       if: steps.cpr.outputs.pull-request-operation == 'created'
       uses: peter-evans/enable-pull-request-automerge@v3
