@@ -1,15 +1,9 @@
 name: Generate Docs
 
-on:
-  pull_request:
-    branches: [ "main" ]
-    types: ["closed"]
-    paths:
-      - "src/**"
+on: [workflow_call]
 
 jobs:
   gen-docs:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     strategy:

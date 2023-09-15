@@ -2,11 +2,11 @@
 name: Deploy static Docs to Pages
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
+  pull_request:
+    branches: [ "main" ]
+    types: ["closed"]
+    paths:
+      - "src/**"
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -22,9 +22,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  gen-docs:
+    if: github.event.pull_request.merged == true
+    uses: ./.github/workflows/gen-docs.yml
   deploy:
-    needs: ["gen-docs"]
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
