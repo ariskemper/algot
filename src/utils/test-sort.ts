@@ -8,7 +8,15 @@ export function testSort(fn: SortFn) {
 function testSortStrings(fn: SortFn): void {
   describe(`${fn.name}`, () => {
     it('It should sort strings', () => {
-      const input = ['banana', 'apple', 'čoko', 'cherry', 'date', 'elderberry', 'fig']
+      const input = [
+        'banana',
+        'apple',
+        'čoko',
+        'cherry',
+        'date',
+        'elderberry',
+        'fig'
+      ]
       const result = fn(input)
 
       expect(result).toEqual([

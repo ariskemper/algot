@@ -1,4 +1,3 @@
-
 /**
  *
  * Counting Sort counts the number of occurrences of each value in the array and
@@ -25,18 +24,18 @@
 export function countingSort(arr: number[]): number[] {
   if (arr.length < 2) return arr
 
-  const { min, max} = getMinMaxValue(arr)
+  const { min, max } = getMinMaxValue(arr)
 
   const countArr = new Array(max - min + 1).fill(0)
 
-  arr.forEach(value => {
+  arr.forEach((value) => {
     countArr[value - min]++
   })
 
   return reconstruct(countArr, min)
 }
 
-function getMinMaxValue(arr: number[]): { min: number, max: number } {
+function getMinMaxValue(arr: number[]): { min: number; max: number } {
   let min = arr[0]
   let max = arr[0]
 
