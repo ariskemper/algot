@@ -1,4 +1,4 @@
-import { compare } from '../../utils'
+import { compare, swap } from '../../utils'
 
 /**
  * Random Quick Sort is divide-and-conquer algorithm that selects a 'pivot'
@@ -46,18 +46,18 @@ function partition<T extends number | string>(
   right: number
 ): number {
   const pivotIndex = Math.floor(Math.random() * (right - left + 1)) + left
-  const pivot = arr[pivotIndex];
-  [arr[pivotIndex], arr[right]] = [arr[right], arr[pivotIndex]]
+  const pivot = arr[pivotIndex]
+  swap(arr, right, pivotIndex)
 
   let partitionIndex = left
   arr.slice(left, right).forEach((item, index) => {
     if (compare(item, pivot) <= 0) {
-      [arr[left + index], arr[partitionIndex]] = [arr[partitionIndex], arr[left + index]]
+      swap(arr, partitionIndex, left + index)
       partitionIndex++
     }
-  });
+  })
 
-  [arr[partitionIndex], arr[right]] = [arr[right], arr[partitionIndex]]
+  swap(arr, right, partitionIndex)
   return partitionIndex
 }
 

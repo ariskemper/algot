@@ -30,7 +30,7 @@ export function selectionSort<T extends number | string>(arr: T[]): T[] {
   for (let i = 0; i < len - 1; i++) {
     let minIndex = i
 
-    for(let j = i + 1; j < len; j++) {
+    for (let j = i + 1; j < len; j++) {
       if (compare(arr[j], arr[minIndex]) < 0) {
         minIndex = j
       }
