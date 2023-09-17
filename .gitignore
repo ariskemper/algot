@@ -1,5 +1,6 @@
 .idea/*
 *.log
+.eslintcache
 node_modules
 coverage
 dist
