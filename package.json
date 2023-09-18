@@ -2,6 +2,7 @@
   "name": "algorithms",
   "version": "1.0.0",
   "main": "./dist/index.js",
+  "type": "module",
   "keywords": [
     "algorithms",
     "bubble-sort",
@@ -16,9 +17,9 @@
   "description": "",
   "scripts": {
     "build": "tsc",
-    "test": "jest",
-    "test:v": "jest --verbose",
-    "test:cov": "jest --coverage",
+    "test": "glob -c \"node --loader tsx --no-warnings --test\" \"./src/**/*.spec.ts\"",
+    "test:watch": "glob -c \"node --loader tsx --no-warnings --watch --test\" \"./src/**/*.spec.ts\"",
+    "test:cov": "glob -c \"c8 node --loader tsx --no-warnings --test\" \"./src/**/*.spec.ts\"",
     "doc": "rm -R ./doc && typedoc --tsconfig ./tsconfig.json",
     "lint": "eslint -f unix \"src/**/*.{ts,tsx}\"",
     "lint:fix": "eslint --fix \"src/**/*.{ts,tsx}\"",
@@ -28,36 +29,20 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@swc/jest": "0.2.29",
-    "@types/jest": "29.5.4",
+    "@types/node": "20.6.2",
     "@typescript-eslint/eslint-plugin": "6.6.0",
     "@typescript-eslint/parser": "6.6.0",
+    "c8": "8.0.1",
     "eslint": "8.48.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-tsdoc": "0.2.17",
+    "glob": "10.3.4",
     "husky": "8.0.3",
-    "jest": "29.6.4",
     "lint-staged": "14.0.1",
     "prettier": "3.0.3",
-    "ts-jest": "29.1.1",
+    "tsx": "3.12.10",
     "typedoc": "0.25.1",
     "typescript": "5.2.2"
-  },
-  "jest": {
-    "transform": {
-      ".ts$": [
-        "@swc/jest"
-      ]
-    },
-    "testRegex": "algorithms/.*/.*\\.spec\\.ts$",
-    "transformIgnorePatterns": [
-      "<rootDir>/node_modules/"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ]
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
