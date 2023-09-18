@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - 18
+dist: focal
 install:
   - npm install
 script:
