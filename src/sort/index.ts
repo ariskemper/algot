@@ -5,6 +5,7 @@ import { InsertionSortFn, insertionSort } from './insertion/insertion'
 import { MergeSortFn, mergeSort } from './merge/merge'
 import { randomQuickSort, RandomQuickSortFn } from './random-quick/random-quick'
 import { SelectionSortFn, selectionSort } from './selection/selection'
+import { ShellSortFn, shellSort } from './shell/shell'
 
 export type SortFn =
   | BubbleSortFn
@@ -13,6 +14,7 @@ export type SortFn =
   | MergeSortFn
   | SelectionSortFn
   | RandomQuickSortFn
+  | ShellSortFn
 
 export type IntegerSortFn = CountingSortFn
 
@@ -23,5 +25,6 @@ export {
   mergeSort,
   selectionSort,
   countingSort,
-  randomQuickSort
+  randomQuickSort,
+  shellSort
 }
