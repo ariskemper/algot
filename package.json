@@ -1,8 +1,7 @@
 {
-  "name": "algorithms",
+  "name": "algot",
   "version": "1.0.0",
-  "main": "./dist/index.js",
-  "type": "module",
+  "main": "dist/index.js",
   "keywords": [
     "algorithms",
     "bubble-sort",
@@ -10,11 +9,14 @@
     "insertion sort",
     "merge sort",
     "selection sort",
-    "counting sort"
+    "counting sort",
+    "random quick sort",
+    "shell sort",
+    "tree sort"
   ],
   "author": "Aris Kemper <aris.github@gmail.com>",
   "license": "MIT",
-  "description": "",
+  "description": "Minimal examples of data structures and algorithms in Typescript.",
   "scripts": {
     "build": "tsc",
     "test": "glob -c \"node --loader tsx --no-warnings --test\" \"./src/**/*.spec.ts\"",
@@ -27,6 +29,13 @@
     "clean": "rm -rf ./dist ./coverage",
     "ci": "npm run clean && npm run lint && npm run build && npm run test",
     "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariskemper/algot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ariskemper/algot/issues"
   },
   "devDependencies": {
     "@types/node": "20.6.2",
