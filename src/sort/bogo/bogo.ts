@@ -1,6 +1,19 @@
 import { compare } from '../../utils/compare'
 import { swap } from '../../utils/swap'
 
+/**
+ * Bogo Sort is highly inefficient algorithm and sometimes referred as
+ * "stupid sort" based on generate and test paradigm. Function shuffle repeadetly
+ * generates random permutation of it's input until it finds one that is sorted.
+ * Bogo Sort is not suitable for real-world applications.
+ *
+ * Time Complexity:
+ * Average Case: O ((n +1)!)
+ * Worst Case: Is unbounded since there is no guarantee it will complete
+ *
+ * @param arr unsorted array
+ * @returns sorted array
+ */
 export function bogoSort<T extends string | number>(arr: T[]): T[] {
   while (isNotSorted(arr)) {
     shuffle(arr)
