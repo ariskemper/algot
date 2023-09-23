@@ -4,6 +4,8 @@ import { IntegerSortFn, SortFn } from '../sort'
 
 export function testSort(fn: SortFn) {
   testSortStrings(fn)
+  testSortSingleInteger(fn)
+  testSortNegativeIntegers(fn)
   testSortIntegers(fn)
 }
 
@@ -41,6 +43,17 @@ export function testSortIntegers(fn: IntegerSortFn): void {
       const result = fn(input)
 
       assert.deepStrictEqual(result, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    })
+  })
+}
+
+export function testSortNegativeIntegers(fn: IntegerSortFn): void {
+  describe(`${fn.name}`, () => {
+    it('should sort negative and positive integer numbers', () => {
+      const input = [5, -2, -1, 4, 6, 1, -3, 7, 10, 9, 8]
+      const result = fn(input)
+
+      assert.deepStrictEqual(result, [-3, -2, -1, 1, 4, 5, 6, 7, 8, 9, 10])
     })
   })
 }
