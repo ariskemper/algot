@@ -1,3 +1,4 @@
+import { bogoSort, BogoSortFn } from './bogo/bogo'
 import { BubbleSortFn, bubbleSort } from './bubble/bubble'
 import { countingSort, CountingSortFn } from './counting/counting'
 import { HeapSortFn, heapSort } from './heap/heap'
@@ -15,6 +16,7 @@ export type SortFn =
   | SelectionSortFn
   | RandomQuickSortFn
   | ShellSortFn
+  | BogoSortFn
 
 export type IntegerSortFn = CountingSortFn
 
@@ -26,5 +28,6 @@ export {
   selectionSort,
   countingSort,
   randomQuickSort,
-  shellSort
+  shellSort,
+  bogoSort
 }
