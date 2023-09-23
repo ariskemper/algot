@@ -1,3 +1,26 @@
+/**
+ * Radix Sort is a non-comparative sorting algorithm. Its time complexity
+ * depends on the number of digits (or the length of the strings or keys)
+ * used to represent the numbers. Let's denote:
+ * - n: the number of elements in the array
+ * - k: the maximum number of digits (or the length of the longest key)
+ *
+ * Time Complexity: O (n x k)
+ * 1. In the case where k is not significantly larger than n (or is less than n),
+ * Radix Sort can linearly sort numbers or strings, which can be faster than
+ * comparison-based sorting algorithms.
+ *
+ * 2. However, if k is very large, the efficiency of Radix Sort can degrade,
+ * making it less suitable for certain scenarios.
+ *
+ * Space Complexity: O (n x k)
+ *
+ * Remember, the exact efficiency and suitability of Radix Sort will
+ * depend on the specific nature and distribution of the data being sorted.
+ *
+ * @param arr passed array of numbers to srt
+ * @returns sorted array of numbers
+ */
 export function radixSort(arr: number[]): number[] {
   if (arr.length <= 1) return arr
 
