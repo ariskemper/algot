@@ -1,3 +1,4 @@
+import { bucketSort, BucketSortFn } from './bucket/bucket'
 import { bogoSort, BogoSortFn } from './bogo/bogo'
 import { BubbleSortFn, bubbleSort } from './bubble/bubble'
 import { countingSort, CountingSortFn } from './counting/counting'
@@ -17,6 +18,7 @@ export type SortFn =
   | RandomQuickSortFn
   | ShellSortFn
   | BogoSortFn
+  | BucketSortFn
 
 export type IntegerSortFn = CountingSortFn
 
@@ -29,5 +31,6 @@ export {
   countingSort,
   randomQuickSort,
   shellSort,
-  bogoSort
+  bogoSort,
+  bucketSort
 }
