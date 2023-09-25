@@ -66,3 +66,5 @@ function getDigit(num: number, position: number): number {
   const str = Math.abs(num).toString()
   return str.length > position ? +str[str.length - 1 - position] : 0
 }
+
+export type RadixSortFn = typeof radixSort

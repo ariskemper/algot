@@ -44,4 +44,4 @@ export function treeSort<T extends number | string>(arr: T[]): T[] {
   return sortedArray
 }
 
-export const TreeSortFn = typeof treeSort
+export type TreeSortFn = typeof treeSort

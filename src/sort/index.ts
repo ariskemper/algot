@@ -1,3 +1,4 @@
+import { bucketSort, BucketSortFn } from './bucket/bucket'
 import { bogoSort, BogoSortFn } from './bogo/bogo'
 import { BubbleSortFn, bubbleSort } from './bubble/bubble'
 import { countingSort, CountingSortFn } from './counting/counting'
@@ -7,6 +8,9 @@ import { MergeSortFn, mergeSort } from './merge/merge'
 import { randomQuickSort, RandomQuickSortFn } from './random-quick/random-quick'
 import { SelectionSortFn, selectionSort } from './selection/selection'
 import { ShellSortFn, shellSort } from './shell/shell'
+import { radixSort, RadixSortFn } from './radix/radix'
+import { gnomeSort, GnomeSortFn } from './gnome/gnome'
+import { treeSort, TreeSortFn } from './tree/tree'
 
 export type SortFn =
   | BubbleSortFn
@@ -16,9 +20,11 @@ export type SortFn =
   | SelectionSortFn
   | RandomQuickSortFn
   | ShellSortFn
+  | GnomeSortFn
+  | TreeSortFn
   | BogoSortFn
 
-export type IntegerSortFn = CountingSortFn
+export type IntegerSortFn = CountingSortFn | RadixSortFn | BucketSortFn
 
 export {
   bubbleSort,
@@ -29,5 +35,9 @@ export {
   countingSort,
   randomQuickSort,
   shellSort,
-  bogoSort
+  gnomeSort,
+  treeSort,
+  radixSort,
+  bogoSort,
+  bucketSort
 }

@@ -1,5 +1,4 @@
-import { testSortIntegers, testSortSingleInteger } from '../../utils/test-sort'
+import { testSort } from '../../utils/test-sort'
 import { gnomeSort } from './gnome'
 
-testSortIntegers(gnomeSort)
-testSortSingleInteger(gnomeSort)
+testSort(gnomeSort)
