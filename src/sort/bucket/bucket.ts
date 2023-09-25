@@ -27,6 +27,15 @@ import { insertionSort } from '../index'
  * O(n^2) sorting algorithm. This worst case occurs when the elements are
  * not uniformly distributed.
  *
+ * Space Complexity: O(n+k), where n is the number of elements in input array
+ * and k is the number of buckets. This is because we need space for the original
+ * array and additional space for the k buckets.
+ *
+ * It's essential to note that the efficiency of Bucket Sort depends
+ * significantly on the distribution of the input data. It works best when the
+ * data are uniformly distributed over a range, allowing the data to be
+ * distributed evenly among the buckets.
+ *
  * @param arr unsorted array of numbers
  * @param bucketSize number, set how many elements should bucket contain
  * @returns sorted array of numbers
