@@ -12,16 +12,15 @@ export function testSort(fn: SortFn) {
 function testSortStrings(fn: SortFn): void {
   describe(`${fn.name}`, () => {
     it('It should sort strings', () => {
-      const input = [
+      const result = fn([
+        'fig',
         'banana',
         'apple',
         'čoko',
         'cherry',
         'date',
-        'elderberry',
-        'fig'
-      ]
-      const result = fn(input)
+        'elderberry'
+      ])
 
       assert.deepStrictEqual(result, [
         'apple',
