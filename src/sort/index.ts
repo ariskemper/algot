@@ -11,6 +11,10 @@ import { ShellSortFn, shellSort } from './shell/shell'
 import { radixSort, RadixSortFn } from './radix/radix'
 import { gnomeSort, GnomeSortFn } from './gnome/gnome'
 import { treeSort, TreeSortFn } from './tree/tree'
+import {
+  cocktailShakerSort,
+  CocktailShakerSortFn
+} from './cocktail-shaker/cocktail-shaker'
 
 export type SortFn =
   | BubbleSortFn
@@ -23,6 +27,7 @@ export type SortFn =
   | GnomeSortFn
   | TreeSortFn
   | BogoSortFn
+  | CocktailShakerSortFn
 
 export type IntegerSortFn = CountingSortFn | RadixSortFn | BucketSortFn
 
@@ -39,5 +44,6 @@ export {
   treeSort,
   radixSort,
   bogoSort,
-  bucketSort
+  bucketSort,
+  cocktailShakerSort
 }
