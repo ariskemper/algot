@@ -7,7 +7,6 @@
     "module": "commonjs",
     "rootDir": "src",
     "declaration": true,
-    "emitDeclarationOnly": true,
     "declarationMap": true,
     "skipLibCheck": true,
     "noEmitOnError": true,
