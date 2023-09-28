@@ -15,3 +15,8 @@
 - run tests with coverage `npm run test:cov`
 - generate typescript documentation `npm run doc`
 - run benchmark for sort algorithms `npm run bench:sort`
+
+[typescript-badge]: https://badges.frapsoft.com/typescript/code/typescript.svg?v=101
+[typescript-url]: https://github.com/microsoft/TypeScript
+[build-badge]: https://github.com/ariskemper/algot/actions/workflows/build.yml/badge.svg
+[build-url]: https://github.com/ariskemper/algot/actions/workflows/build.yml
