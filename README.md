@@ -20,7 +20,7 @@
 [typescript-url]: https://github.com/microsoft/TypeScript
 [build-badge]: https://github.com/ariskemper/algot/actions/workflows/build.yml/badge.svg
 [build-url]: https://github.com/ariskemper/algot/actions/workflows/build.yml
-[codecov-bade]: https://codecov.io/gh/ariskemper/algorithms/graph/badge.svg?token=J95CIN2UZT
+[codecov-badge]: https://codecov.io/gh/ariskemper/algorithms/graph/badge.svg?token=J95CIN2UZT
 [codecov-url]: https://codecov.io/gh/ariskemper/algorithms
 [snyk-badge]: https://snyk.io/test/github/ariskemper/algorithms/badge.svg
 [snyk-url]: https://snyk.io/test/github/ariskemper/algorithms
