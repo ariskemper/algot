@@ -1,6 +1,6 @@
 import { swap } from '../../../src/utils'
 
-export function generateRandomizedArray(
+export function generateRandomizedIntegerArray(
   size: number,
   range: { min: number; max: number }
 ): number[] {
@@ -11,7 +11,7 @@ export function generateRandomizedArray(
   return arr
 }
 
-export function generateSortedArray(
+export function generateSortedIntegerArray(
   size: number,
   start: number = 0,
   step: number = 1
@@ -23,11 +23,11 @@ export function generateSortedArray(
   return Array.from({ length: size }, (_, index) => start + index * step)
 }
 
-export function generateDescSortedArray(size: number): number[] {
-  return generateSortedArray(size).sort((a, b) => b - a)
+export function generateDescSortedIntegerArray(size: number): number[] {
+  return generateSortedIntegerArray(size).sort((a, b) => b - a)
 }
 
-export function generateArrayWithUniqueValues(
+export function generateWithUniqueValuesIntegerArray(
   size: number,
   uniqueValues: number[]
 ): number[] {
@@ -48,7 +48,7 @@ export function generateArrayWithUniqueValues(
   return result
 }
 
-export function generateNearlySortedArray(
+export function generateNearlySortedIntegerArray(
   size: number,
   swapCount: number
 ): number[] {
