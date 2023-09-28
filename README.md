@@ -3,8 +3,8 @@
 [![TypeScript][typescript-badge]][typescript-url]
 
 [![CI][build-badge]][build-url]
-[![codecov](https://codecov.io/gh/ariskemper/algorithms/graph/badge.svg?token=J95CIN2UZT)](https://codecov.io/gh/ariskemper/algorithms)
-[![Known Vulnerabilities](https://snyk.io/test/github/ariskemper/algorithms/badge.svg)](https://snyk.io/test/github/ariskemper/algorithms)
+[![codecov][codecov-badge][codecov-url]
+[![Known Vulnerabilities][snyk-badge]][snyk-url]
 
 ## Installing
 
@@ -20,3 +20,7 @@
 [typescript-url]: https://github.com/microsoft/TypeScript
 [build-badge]: https://github.com/ariskemper/algot/actions/workflows/build.yml/badge.svg
 [build-url]: https://github.com/ariskemper/algot/actions/workflows/build.yml
+[codecov-bade]: https://codecov.io/gh/ariskemper/algorithms/graph/badge.svg?token=J95CIN2UZT
+[codecov-url]: https://codecov.io/gh/ariskemper/algorithms
+[snyk-badge]: https://snyk.io/test/github/ariskemper/algorithms/badge.svg
+[snyk-url]: https://snyk.io/test/github/ariskemper/algorithms
