@@ -3,7 +3,7 @@
 [![TypeScript][typescript-badge]][typescript-url]
 
 [![CI][build-badge]][build-url]
-[![codecov][codecov-badge][codecov-url]
+[![codecov][codecov-badge]][codecov-url]
 [![Known Vulnerabilities][snyk-badge]][snyk-url]
 
 ## Installing
