@@ -13,7 +13,7 @@ import {
   radixSort,
   shellSort,
   treeSort
-} from './../sort'
+} from '../sort'
 
 import {
   generateDescSortedIntegerArray,
