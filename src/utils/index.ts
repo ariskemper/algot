@@ -1,4 +1,4 @@
-import { swap } from './swap'
 import { compare } from './compare'
+import { swap } from './swap'
 
-export { swap, compare }
+export { compare, swap }

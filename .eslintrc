@@ -1,12 +1,20 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "eslint-plugin-tsdoc"],
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-tsdoc",
+    "simple-import-sort",
+    "import"
+  ],
   "extends":  [
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
     "semi": ["error", "never"],
-    "quotes": [2, "single"]
+    "quotes": [2, "single"],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/no-duplicates": "error"
   }
 }

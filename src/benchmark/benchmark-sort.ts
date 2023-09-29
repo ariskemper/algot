@@ -1,4 +1,4 @@
-import { run, bench, group } from 'mitata'
+import { bench, group, run } from 'mitata'
 
 import {
   bubbleSort,
@@ -8,13 +8,12 @@ import {
   heapSort,
   insertionSort,
   mergeSort,
+  radixSort,
   randomQuickSort,
   selectionSort,
-  radixSort,
   shellSort,
   treeSort
 } from '../sort'
-
 import {
   generateDescSortedIntegerArray,
   generateNearlySortedIntegerArray,
