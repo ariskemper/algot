@@ -40,11 +40,7 @@ export function randomQuickSort<T extends number | string>(
   return arr
 }
 
-function partition<T extends number | string>(
-  arr: T[],
-  left: number,
-  right: number
-): number {
+function partition<T extends number | string>(arr: T[], left: number, right: number): number {
   const pivotIndex = Math.floor(Math.random() * (right - left + 1)) + left
   const pivot = arr[pivotIndex]
   swap(arr, right, pivotIndex)

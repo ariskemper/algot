@@ -13,25 +13,9 @@ export function testSort(fn: SortFn) {
 function testSortStrings(fn: SortFn): void {
   describe(`${fn.name}`, () => {
     it('It should sort strings', () => {
-      const result = fn([
-        'fig',
-        'banana',
-        'apple',
-        'čoko',
-        'cherry',
-        'date',
-        'elderberry'
-      ])
+      const result = fn(['fig', 'banana', 'apple', 'čoko', 'cherry', 'date', 'elderberry'])
 
-      assert.deepStrictEqual(result, [
-        'apple',
-        'banana',
-        'cherry',
-        'čoko',
-        'date',
-        'elderberry',
-        'fig'
-      ])
+      assert.deepStrictEqual(result, ['apple', 'banana', 'cherry', 'čoko', 'date', 'elderberry', 'fig'])
     })
   })
 }

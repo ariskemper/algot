@@ -1,10 +1,7 @@
 import { bogoSort, BogoSortFn } from './bogo/bogo'
 import { bubbleSort, BubbleSortFn } from './bubble/bubble'
 import { bucketSort, BucketSortFn } from './bucket/bucket'
-import {
-  cocktailShakerSort,
-  CocktailShakerSortFn
-} from './cocktail-shaker/cocktail-shaker'
+import { cocktailShakerSort, CocktailShakerSortFn } from './cocktail-shaker/cocktail-shaker'
 import { countingSort, CountingSortFn } from './counting/counting'
 import { gnomeSort, GnomeSortFn } from './gnome/gnome'
 import { heapSort, HeapSortFn } from './heap/heap'
