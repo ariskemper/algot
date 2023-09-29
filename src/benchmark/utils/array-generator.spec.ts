@@ -1,14 +1,15 @@
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
+
 import {
-  generateSortedIntegerArray,
-  generateRandomizedIntegerArray,
   generateDescSortedIntegerArray,
-  generateWithUniqueValuesIntegerArray,
-  generateNearlySortedIntegerArray
+  generateNearlySortedIntegerArray,
+  generateRandomizedIntegerArray,
+  generateSortedIntegerArray,
+  generateWithUniqueValuesIntegerArray
 } from './array-generator'
-import { isInGivenRange } from './range'
 import { containsSomeValues } from './contain'
+import { isInGivenRange } from './range'
 describe('generateRandomizedIntegerArray', () => {
   it('should generate array of given size', () => {
     const arr = generateRandomizedIntegerArray(10, { min: 1, max: 10 })
