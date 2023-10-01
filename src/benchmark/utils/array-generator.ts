@@ -1,9 +1,6 @@
 import { swap } from '../../../src/utils'
 
-export function generateRandomizedIntegerArray(
-  size: number,
-  range: { min: number; max: number }
-): number[] {
+export function generateRandomizedIntegerArray(size: number, range: { min: number; max: number }): number[] {
   const arr: number[] = []
   for (let i = 0; i < size; i++) {
     arr.push(randomInteger(range.min, range.max))
@@ -11,11 +8,7 @@ export function generateRandomizedIntegerArray(
   return arr
 }
 
-export function generateSortedIntegerArray(
-  size: number,
-  start: number = 0,
-  step: number = 1
-): number[] {
+export function generateSortedIntegerArray(size: number, start: number = 0, step: number = 1): number[] {
   if (size < 0) {
     throw new Error('Size must be a non-negative integer')
   }
@@ -27,10 +20,7 @@ export function generateDescSortedIntegerArray(size: number): number[] {
   return generateSortedIntegerArray(size).sort((a, b) => b - a)
 }
 
-export function generateWithUniqueValuesIntegerArray(
-  size: number,
-  uniqueValues: number[]
-): number[] {
+export function generateWithUniqueValuesIntegerArray(size: number, uniqueValues: number[]): number[] {
   if (size < 0) {
     throw new Error('Size must be a non-negative integer')
   }
@@ -48,10 +38,7 @@ export function generateWithUniqueValuesIntegerArray(
   return result
 }
 
-export function generateNearlySortedIntegerArray(
-  size: number,
-  swapCount: number
-): number[] {
+export function generateNearlySortedIntegerArray(size: number, swapCount: number): number[] {
   if (size < 0 || swapCount < 0) {
     throw new Error('Size and swap count must be non-negative integers')
   }

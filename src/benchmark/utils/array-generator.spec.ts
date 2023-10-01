@@ -45,10 +45,7 @@ describe('generateSortedIntegerArray', () => {
     const size = 7
     const expectedResult = [2, 4, 6, 8, 10, 12, 14]
 
-    assert.deepStrictEqual(
-      generateSortedIntegerArray(size, 2, 2),
-      expectedResult
-    )
+    assert.deepStrictEqual(generateSortedIntegerArray(size, 2, 2), expectedResult)
   })
 
   it('should generate an empty array when size is 0', () => {
@@ -56,10 +53,7 @@ describe('generateSortedIntegerArray', () => {
   })
 
   it('should throw an error for negative size', () => {
-    assert.throws(
-      () => generateSortedIntegerArray(-1),
-      new Error('Size must be a non-negative integer')
-    )
+    assert.throws(() => generateSortedIntegerArray(-1), new Error('Size must be a non-negative integer'))
   })
 })
 
@@ -90,10 +84,7 @@ describe('generateArrayWithUniqueValues', () => {
   })
 
   it('should throw an error, if unique value array is empty', () => {
-    assert.throws(
-      () => generateWithUniqueValuesIntegerArray(2, []),
-      new Error('Unique values array must not be empty')
-    )
+    assert.throws(() => generateWithUniqueValuesIntegerArray(2, []), new Error('Unique values array must not be empty'))
   })
 })
 

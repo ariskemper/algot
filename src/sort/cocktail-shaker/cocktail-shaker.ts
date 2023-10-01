@@ -38,12 +38,7 @@ export function cocktailShakerSort<T extends string | number>(arr: T[]): T[] {
   return arr
 }
 
-function traverse<T extends string | number>(
-  arr: T[],
-  start: number,
-  end: number,
-  direction: number
-): T[] {
+function traverse<T extends string | number>(arr: T[], start: number, end: number, direction: number): T[] {
   if (direction === 1) {
     for (let i = start; i < end; i++) {
       if (compare(arr[i], arr[i + 1]) > 0) {

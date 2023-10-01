@@ -7,9 +7,11 @@
     "import"
   ],
   "extends":  [
+    "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
+    "prettier/prettier": "warn",
     "semi": ["error", "never"],
     "quotes": [2, "single"],
     "simple-import-sort/imports": "error",
