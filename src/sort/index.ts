@@ -3,6 +3,7 @@ import { bubbleSort, BubbleSortFn } from './bubble/bubble'
 import { bucketSort, BucketSortFn } from './bucket/bucket'
 import { cocktailShakerSort, CocktailShakerSortFn } from './cocktail-shaker/cocktail-shaker'
 import { countingSort, CountingSortFn } from './counting/counting'
+import { cycleSort, CycleSortFn } from './cycle/cycle'
 import { gnomeSort, GnomeSortFn } from './gnome/gnome'
 import { heapSort, HeapSortFn } from './heap/heap'
 import { insertionSort, InsertionSortFn } from './insertion/insertion'
@@ -25,6 +26,7 @@ export type SortFn =
   | TreeSortFn
   | BogoSortFn
   | CocktailShakerSortFn
+  | CycleSortFn
 
 export type IntegerSortFn = CountingSortFn | RadixSortFn | BucketSortFn
 
@@ -34,6 +36,7 @@ export {
   bucketSort,
   cocktailShakerSort,
   countingSort,
+  cycleSort,
   gnomeSort,
   heapSort,
   insertionSort,
