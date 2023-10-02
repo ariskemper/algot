@@ -1,6 +1,6 @@
-import { testSortIntegers, testSortNegativeIntegers, testSortSingleInteger } from '../../utils/test-sort'
+import { testSortNegativeIntegers, testSortRandomIntegers, testSortSingleInteger } from '../../utils/test-sort'
 import { radixSort } from './radix'
 
-testSortIntegers(radixSort)
+testSortRandomIntegers(radixSort)
 testSortSingleInteger(radixSort)
 testSortNegativeIntegers(radixSort)

@@ -1,5 +1,5 @@
-import { testSortIntegers, testSortSingleInteger } from '../../utils/test-sort'
+import { testSortRandomIntegers, testSortSingleInteger } from '../../utils/test-sort'
 import { countingSort } from './counting'
 
-testSortIntegers(countingSort)
+testSortRandomIntegers(countingSort)
 testSortSingleInteger(countingSort)

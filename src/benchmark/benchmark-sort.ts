@@ -8,6 +8,7 @@ import {
   gnomeSort,
   heapSort,
   insertionSort,
+  introSort,
   mergeSort,
   radixSort,
   randomQuickSort,
@@ -41,6 +42,7 @@ group(`Sort Randomized Array ${size} of integer numbers`, () => {
   bench('gnomeSort', () => gnomeSort([...randomizedArray]))
   bench('heapSort', () => heapSort([...randomizedArray]))
   bench('insertionSort', () => insertionSort([...randomizedArray]))
+  bench('introSort', () => introSort([...randomizedArray]))
   bench('mergeSort', () => mergeSort([...randomizedArray]))
   bench('radixSort', () => radixSort([...randomizedArray]))
   bench('randomQuickSort', () => randomQuickSort([...randomizedArray]))
@@ -58,6 +60,7 @@ group(`Sort Sorted Array ${size} of integer numbers`, () => {
   bench('gnomeSort', () => gnomeSort([...sortedArray]))
   bench('heapSort', () => heapSort([...sortedArray]))
   bench('insertionSort', () => insertionSort([...sortedArray]))
+  bench('introSort', () => introSort([...sortedArray]))
   bench('mergeSort', () => mergeSort([...sortedArray]))
   bench('radixSort', () => radixSort([...sortedArray]))
   bench('randomQuickSort', () => randomQuickSort([...sortedArray]))
@@ -75,6 +78,7 @@ group(`Sort Desc Sorted Array ${size} of integer numbers`, () => {
   bench('gnomeSort', () => gnomeSort([...descSortedArray]))
   bench('heapSort', () => heapSort([...descSortedArray]))
   bench('insertionSort', () => insertionSort([...descSortedArray]))
+  bench('introSort', () => introSort([...descSortedArray]))
   bench('mergeSort', () => mergeSort([...descSortedArray]))
   bench('radixSort', () => radixSort([...descSortedArray]))
   bench('randomQuickSort', () => randomQuickSort([...descSortedArray]))
@@ -92,6 +96,7 @@ group(`Sort Nearly Sorted Array ${size} of integer numbers`, () => {
   bench('gnomeSort', () => gnomeSort([...nearlySortedArray]))
   bench('heapSort', () => heapSort([...nearlySortedArray]))
   bench('insertionSort', () => insertionSort([...nearlySortedArray]))
+  bench('introSort', () => introSort([...nearlySortedArray]))
   bench('mergeSort', () => mergeSort([...nearlySortedArray]))
   bench('radixSort', () => radixSort([...nearlySortedArray]))
   bench('randomQuickSort', () => randomQuickSort([...nearlySortedArray]))

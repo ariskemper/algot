@@ -21,23 +21,23 @@ import { compare, swap } from '../../utils'
  *
  * @function heapSort
  * @param arr array which should be sorted
+ * @param low start index of heap
+ * @param n number of elements in heap
  * @returns sorted array
  */
-export function heapSort<T extends number | string>(arr: T[]): T[] {
-  const n = arr.length
-
+export function heapSort<T extends number | string>(arr: T[], low: number = 0, n: number = arr.length): T[] {
   // Build heap (rearrange array)
-  for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+  for (let i = Math.floor(n / 2) - 1; i >= low; i--) {
     heapify(arr, n, i)
   }
 
   // One by one extract an element from heap
-  for (let i = n - 1; i > 0; i--) {
+  for (let i = n - 1; i > low; i--) {
     // Move current root to end
-    arr = swap(arr, 0, i)
+    arr = swap(arr, low, i)
 
     // Call max heapify on the reduced heap
-    heapify(arr, i, 0)
+    heapify(arr, i, low)
   }
 
   return arr
