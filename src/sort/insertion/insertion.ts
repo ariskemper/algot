@@ -21,18 +21,22 @@ import { compare, swap } from '../../utils'
  * require additional space proportional to the input size.
  *
  * @param arr unsorted array
+ * @param low starting index
+ * @param high ending index
  * @returns sorted array
  */
-export function insertionSort<T extends number | string>(arr: T[]): T[] {
-  const len = arr.length
-
-  for (let i = 1; i < len; i++) {
+export function insertionSort<T extends number | string>(
+  arr: T[],
+  low: number = 0,
+  high: number = arr.length - 1
+): T[] {
+  for (let i = low + 1; i <= high; i++) {
     const key = arr[i]
     let j = i - 1
 
     // Move elements of arr[0..i-1] that are greater than key
     // to one position ahead of their current position
-    while (j >= 0 && compare(arr[j], key) > 0) {
+    while (j >= low && compare(arr[j], key) > 0) {
       swap(arr, j + 1, j)
       j = j - 1
     }

@@ -7,6 +7,7 @@ import { cycleSort, CycleSortFn } from './cycle/cycle'
 import { gnomeSort, GnomeSortFn } from './gnome/gnome'
 import { heapSort, HeapSortFn } from './heap/heap'
 import { insertionSort, InsertionSortFn } from './insertion/insertion'
+import { introSort, IntroSortFn } from './intro/intro'
 import { mergeSort, MergeSortFn } from './merge/merge'
 import { radixSort, RadixSortFn } from './radix/radix'
 import { randomQuickSort, RandomQuickSortFn } from './random-quick/random-quick'
@@ -27,6 +28,7 @@ export type SortFn =
   | BogoSortFn
   | CocktailShakerSortFn
   | CycleSortFn
+  | IntroSortFn
 
 export type IntegerSortFn = CountingSortFn | RadixSortFn | BucketSortFn
 
@@ -40,6 +42,7 @@ export {
   gnomeSort,
   heapSort,
   insertionSort,
+  introSort,
   mergeSort,
   radixSort,
   randomQuickSort,
