@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>mergeSort | algot</title><meta name="description" content="Documentation for algot"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>introSort | algot</title><meta name="description" content="Documentation for algot"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,32 +13,31 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../index.html">algot</a></li>
-<li><a href="../modules/sort_merge_merge.html">sort/merge/merge</a></li>
-<li><a href="sort_merge_merge.mergeSort.html">mergeSort</a></li></ul>
-<h1>Function mergeSort</h1></div>
+<li><a href="../modules/sort_intro_intro.html">sort/intro/intro</a></li>
+<li><a href="sort_intro_intro.introSort.html">introSort</a></li></ul>
+<h1>Function introSort</h1></div>
 <section class="tsd-panel">
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="mergeSort"><span class="tsd-kind-call-signature">merge<wbr/>Sort</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">arr</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">[]</span><a href="#mergeSort" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="introSort"><span class="tsd-kind-call-signature">intro<wbr/>Sort</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">arr</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">[]</span><a href="#introSort" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Merge Sort is a divide-and-conquer algorithm that divides the array into
-smaller pieces, sorts each piece, and then merges them back together.</p>
+<div class="tsd-comment tsd-typography"><p>IntroSort, short for &quot;Introspective Sort&quot;, is a hybrid sorting algorithm that
+provides both fast average performance and (worst-case) optimal performance.
+It begins with quicksort, switches to heapsort when the recursion depth exceeds
+a level based on (the logarithm of) the number of elements being sorted,
+and switches to insertion sort when the partition size is below some threshold.</p>
 <p>Time Complexity</p>
 <ul>
-<li><p>Best Case: O(n log n) - Even in the best case, the array needs to be split
-down and merged back, requiring n log n operations.</p>
-</li>
-<li><p>Average Case: O(n log n) - This is the standard time complexity for merge
-sort, as each split divides the array in half.</p>
-</li>
-<li><p>Worst Case: O(n log n) - The worst case time complexity remains the same,
-as the divide and merge operations are consistent regardless of the
-input distribution.</p>
-</li>
+<li>Best Case: O(n log n)</li>
+<li>Average Case: O(n log n)</li>
+<li>Worst Case: O(n log n)</li>
 </ul>
-<p>Space Complexity: O(n) - This is because merge sort requires additional space
-to store the temporary arrays used during the merge step. The space is used
-to hold the two halves that are being merged, and this space adds up to n for
-all levels of the recursion.</p>
+<p>The guarantee of O(nlogn) worst-case performance comes from the heapsort,
+which takes over when quicksort&#39;s recursion goes too deep. The insertion sort
+provides optimization for small array segments, making the sort faster for
+small partitions.</p>
+<p>Space Complexity: O(log n)</p>
+<p>It&#39;s worth noting that while IntroSort is designed to have the best of three
+algorithms (quicksort, heapsort, and insertion sort).</p>
 </div>
 <section class="tsd-panel">
 <h4>Type Parameters</h4>
@@ -55,9 +54,11 @@ all levels of the recursion.</p>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">[]</span></h4><p>sorted array</p>
 
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Function</h4><p>introSort</p>
+</div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ariskemper/algot/blob/8ee78c4/src/sort/merge/merge.ts#L26">sort/merge/merge.ts:26</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/ariskemper/algot/blob/8ee78c4/src/sort/intro/intro.ts#L31">sort/intro/intro.ts:31</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
