@@ -4,6 +4,7 @@ import {
   bubbleSort,
   bucketSort,
   countingSort,
+  cycleSort,
   gnomeSort,
   heapSort,
   insertionSort,
@@ -36,6 +37,7 @@ group(`Sort Randomized Array ${size} of integer numbers`, () => {
   bench('buubleSort', () => bubbleSort([...randomizedArray]))
   bench('bucketSort', () => bucketSort([...randomizedArray]))
   bench('countingSort', () => countingSort([...randomizedArray]))
+  bench('cycleSort', () => cycleSort([...randomizedArray]))
   bench('gnomeSort', () => gnomeSort([...randomizedArray]))
   bench('heapSort', () => heapSort([...randomizedArray]))
   bench('insertionSort', () => insertionSort([...randomizedArray]))
@@ -52,6 +54,7 @@ group(`Sort Sorted Array ${size} of integer numbers`, () => {
   bench('buubleSort', () => bubbleSort([...sortedArray]))
   bench('bucketSort', () => bucketSort([...sortedArray]))
   bench('countingSort', () => countingSort([...sortedArray]))
+  bench('cycleSort', () => cycleSort([...sortedArray]))
   bench('gnomeSort', () => gnomeSort([...sortedArray]))
   bench('heapSort', () => heapSort([...sortedArray]))
   bench('insertionSort', () => insertionSort([...sortedArray]))
@@ -68,6 +71,7 @@ group(`Sort Desc Sorted Array ${size} of integer numbers`, () => {
   bench('buubleSort', () => bubbleSort([...descSortedArray]))
   bench('bucketSort', () => bucketSort([...descSortedArray]))
   bench('countingSort', () => countingSort([...descSortedArray]))
+  bench('cycleSort', () => cycleSort([...descSortedArray]))
   bench('gnomeSort', () => gnomeSort([...descSortedArray]))
   bench('heapSort', () => heapSort([...descSortedArray]))
   bench('insertionSort', () => insertionSort([...descSortedArray]))
@@ -84,6 +88,7 @@ group(`Sort Nearly Sorted Array ${size} of integer numbers`, () => {
   bench('buubleSort', () => bubbleSort([...nearlySortedArray]))
   bench('bucketSort', () => bucketSort([...nearlySortedArray]))
   bench('countingSort', () => countingSort([...nearlySortedArray]))
+  bench('cycleSort', () => cycleSort([...nearlySortedArray]))
   bench('gnomeSort', () => gnomeSort([...nearlySortedArray]))
   bench('heapSort', () => heapSort([...nearlySortedArray]))
   bench('insertionSort', () => insertionSort([...nearlySortedArray]))
