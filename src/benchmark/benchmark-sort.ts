@@ -1,6 +1,7 @@
 import { bench, group, run } from 'mitata'
 
 import {
+  bitonicSort,
   bubbleSort,
   bucketSort,
   countingSort,
@@ -16,7 +17,6 @@ import {
   shellSort,
   treeSort
 } from '../sort'
-import { bitonicSort } from '../sort/bitonic/bitonic'
 import {
   generateDescSortedIntegerArray,
   generateNearlySortedIntegerArray,
