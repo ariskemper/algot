@@ -16,6 +16,7 @@ import {
   shellSort,
   treeSort
 } from '../sort'
+import { bitonicSort } from '../sort/bitonic/bitonic'
 import {
   generateDescSortedIntegerArray,
   generateNearlySortedIntegerArray,
@@ -23,7 +24,7 @@ import {
   generateSortedIntegerArray
 } from './utils/array-generator.js'
 
-const size = 1000
+const size = 1024
 
 const randomizedArray = generateRandomizedIntegerArray(size, {
   min: 0,
@@ -35,6 +36,7 @@ const nearlySortedArray = generateNearlySortedIntegerArray(size, 10)
 
 group(`Sort Randomized Array ${size} of integer numbers`, () => {
   bench('native array sort', () => [...randomizedArray].sort((a, b) => a - b))
+  bench('bitonicSort', () => bitonicSort([...randomizedArray]))
   bench('buubleSort', () => bubbleSort([...randomizedArray]))
   bench('bucketSort', () => bucketSort([...randomizedArray]))
   bench('countingSort', () => countingSort([...randomizedArray]))
@@ -53,6 +55,7 @@ group(`Sort Randomized Array ${size} of integer numbers`, () => {
 
 group(`Sort Sorted Array ${size} of integer numbers`, () => {
   bench('native array sort', () => [...sortedArray].sort((a, b) => a - b))
+  bench('bitonicSort', () => bitonicSort([...sortedArray]))
   bench('buubleSort', () => bubbleSort([...sortedArray]))
   bench('bucketSort', () => bucketSort([...sortedArray]))
   bench('countingSort', () => countingSort([...sortedArray]))
@@ -71,6 +74,7 @@ group(`Sort Sorted Array ${size} of integer numbers`, () => {
 
 group(`Sort Desc Sorted Array ${size} of integer numbers`, () => {
   bench('native array sort', () => [...descSortedArray].sort((a, b) => a - b))
+  bench('bitonicSort', () => bitonicSort([...descSortedArray]))
   bench('buubleSort', () => bubbleSort([...descSortedArray]))
   bench('bucketSort', () => bucketSort([...descSortedArray]))
   bench('countingSort', () => countingSort([...descSortedArray]))
@@ -89,6 +93,7 @@ group(`Sort Desc Sorted Array ${size} of integer numbers`, () => {
 
 group(`Sort Nearly Sorted Array ${size} of integer numbers`, () => {
   bench('native array sort', () => [...nearlySortedArray].sort((a, b) => a - b))
+  bench('bitonicSort', () => bitonicSort([...nearlySortedArray]))
   bench('buubleSort', () => bubbleSort([...nearlySortedArray]))
   bench('bucketSort', () => bucketSort([...nearlySortedArray]))
   bench('countingSort', () => countingSort([...nearlySortedArray]))

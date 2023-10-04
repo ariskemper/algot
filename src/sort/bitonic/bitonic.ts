@@ -44,3 +44,5 @@ function bitonicSortRec<SortT>(arr: SortT[], low: number, cnt: number, ascending
     bitonicMerge(arr, low, cnt, ascending)
   }
 }
+
+export type BitonicSortFn = typeof bitonicSort
