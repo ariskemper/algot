@@ -25,7 +25,7 @@ import { compare, swap } from '../../utils'
  * @param ascending direction of sort
  * @returns sorted array
  */
-export function bitonicSort<SortT>(arr: SortT[], ascending: boolean = true): SortT[] {
+export function bitonicSort<T extends string | number>(arr: T[], ascending: boolean = true): T[] {
   const n = arr.length
   if (n <= 1) return arr
 
@@ -43,14 +43,14 @@ export function bitonicSort<SortT>(arr: SortT[], ascending: boolean = true): Sor
   return arr
 }
 
-function compareAndSwap<SortT>(arr: SortT[], i: number, j: number, ascending: boolean) {
+function compareAndSwap<T extends string | number>(arr: T[], i: number, j: number, ascending: boolean) {
   if (ascending ? compare(arr[i], arr[j]) > 0 : compare(arr[i], arr[j]) < 0) {
     arr = swap(arr, i, j)
   }
   return arr
 }
 
-function bitonicMerge<SortT>(arr: SortT[], low: number, cnt: number, ascending: boolean) {
+function bitonicMerge<T extends string | number>(arr: T[], low: number, cnt: number, ascending: boolean) {
   if (cnt > 1) {
     const k = Math.floor(cnt / 2)
     for (let i = low; i < low + k; i++) {
@@ -61,7 +61,7 @@ function bitonicMerge<SortT>(arr: SortT[], low: number, cnt: number, ascending: 
   }
 }
 
-function bitonicSortRec<SortT>(arr: SortT[], low: number, cnt: number, ascending: boolean) {
+function bitonicSortRec<T extends string | number>(arr: T[], low: number, cnt: number, ascending: boolean) {
   if (cnt > 1) {
     const k = Math.floor(cnt / 2)
     bitonicSortRec(arr, low, k, !ascending)
