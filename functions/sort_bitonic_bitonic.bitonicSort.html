@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>generateDescSortedIntegerArray | algot</title><meta name="description" content="Documentation for algot"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>bitonicSort | algot</title><meta name="description" content="Documentation for algot"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,21 +13,53 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../index.html">algot</a></li>
-<li><a href="../modules/benchmark_utils_array_generator.html">benchmark/utils/array-generator</a></li>
-<li><a href="benchmark_utils_array_generator.generateDescSortedIntegerArray.html">generateDescSortedIntegerArray</a></li></ul>
-<h1>Function generateDescSortedIntegerArray</h1></div>
+<li><a href="../modules/sort_bitonic_bitonic.html">sort/bitonic/bitonic</a></li>
+<li><a href="sort_bitonic_bitonic.bitonicSort.html">bitonicSort</a></li></ul>
+<h1>Function bitonicSort</h1></div>
 <section class="tsd-panel">
 <ul class="tsd-signatures">
-<li class="tsd-signature tsd-anchor-link" id="generateDescSortedIntegerArray"><span class="tsd-kind-call-signature">generate<wbr/>Desc<wbr/>Sorted<wbr/>Integer<wbr/>Array</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">size</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><a href="#generateDescSortedIntegerArray" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="bitonicSort"><span class="tsd-kind-call-signature">bitonic<wbr/>Sort</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">arr</span>, <span class="tsd-kind-parameter">ascending</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">[]</span><a href="#bitonicSort" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Bitonic Sort or bitonic merge sort algorithm is a parallel algorithm for sorting
+. It is also used as construction method for building a sorting network.
+The algorithm was devised by Ken Batcher. The resulting sorting networks
+consist of O(n log^2 (n)) comparators and have a delay of O(log^2 (n)),
+where n is the number of items to be sorted.</p>
+<p>Time Complexity: O(n log^2 (n)) - Butonic sort involves constructing
+bitonic sequences and repeatedly splitting them and rearranging them
+to form new bitonic sequences. It involves log n stages, and at each
+stage, there are O(n) comparisons.</p>
+<p>Space Complexity: O(1) - Bitonic sort is in-place sorting algorithm,
+meaning it doesn&#39;t require extra space or auxiliary arrays for sorting the
+input.</p>
+<p>Bitonic sort is not commonly used for general-purpose sorting due to its
+non-competitive time complexity compared to faster, simpler algorithms like
+QuickSort or MergeSort. However, it has its uses in parallel processing
+systems because of its ability to sort in a parallel manner.</p>
+</div>
+<section class="tsd-panel">
+<h4>Type Parameters</h4>
+<ul class="tsd-type-parameter-list">
+<li>
+<h4><span class="tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">size</span>: <span class="tsd-signature-type">number</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">arr</span>: <span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>unsorted array should be size of power of 2 - (1, 2, 4, 8, 16, ...)</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
+<li>
+<h5><span class="tsd-kind-parameter">ascending</span>: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+<div class="tsd-comment tsd-typography"><p>direction of sort</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">[]</span></h4><p>sorted array</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ariskemper/algot/blob/edf450a/src/benchmark/utils/array-generator.ts#L19">benchmark/utils/array-generator.ts:19</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/ariskemper/algot/blob/edf450a/src/sort/bitonic/bitonic.ts#L28">sort/bitonic/bitonic.ts:28</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
