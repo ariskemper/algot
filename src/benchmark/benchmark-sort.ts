@@ -24,6 +24,7 @@ import {
   generateSortedIntegerArray
 } from './utils/array-generator.js'
 
+// size setled to 1024 to support also bitonic sort
 const size = 1024
 
 const randomizedArray = generateRandomizedIntegerArray(size, {
