@@ -1,3 +1,4 @@
+import { bitonicSort, BitonicSortFn } from './bitonic/bitonic'
 import { bogoSort, BogoSortFn } from './bogo/bogo'
 import { bubbleSort, BubbleSortFn } from './bubble/bubble'
 import { bucketSort, BucketSortFn } from './bucket/bucket'
@@ -29,10 +30,12 @@ export type SortFn =
   | CocktailShakerSortFn
   | CycleSortFn
   | IntroSortFn
+  | BitonicSortFn
 
 export type IntegerSortFn = CountingSortFn | RadixSortFn | BucketSortFn
 
 export {
+  bitonicSort,
   bogoSort,
   bubbleSort,
   bucketSort,
