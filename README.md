@@ -25,7 +25,7 @@
   - [x] [bubbleSort](src/sort/bubble/bubble.ts)
   - [x] [bucketSort](src/sort/bucket/bucket.ts)
   - [x] [cocktailShakerSort](src/sort/cocktail-shaker/cocktail-shaker.ts)
-  - [x] [combSort](src/sort/comb/comb.ts)
+  - [x] [comboSort](src/sort/combo/combo.ts)
   - [x] [countingSort](src/sort/counting/counting.ts)
   - [ ] [cubeSort]
   - [x] [cycleSort](src/sort/cycle/cycle.ts)
