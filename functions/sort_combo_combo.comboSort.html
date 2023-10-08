@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>sort/intro/intro | algot</title><meta name="description" content="Documentation for algot"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>comboSort | algot</title><meta name="description" content="Documentation for algot"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,21 +13,61 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../index.html">algot</a></li>
-<li><a href="sort_intro_intro.html">sort/intro/intro</a></li></ul>
-<h1>Module sort/intro/intro</h1></div><aside class="tsd-sources">
+<li><a href="../modules/sort_combo_combo.html">sort/combo/combo</a></li>
+<li><a href="sort_combo_combo.comboSort.html">comboSort</a></li></ul>
+<h1>Function comboSort</h1></div>
+<section class="tsd-panel">
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="comboSort"><span class="tsd-kind-call-signature">combo<wbr/>Sort</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">arr</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">[]</span><a href="#comboSort" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Combo Sort is a relatively straightforward sorting algorithm that improves
+upon the traditional Bubble Sort by utilizing a gap during comparisons and
+swaps. The algorithm was devised by Włodzimierz Dobosiewicz and Artur Borowy
+in 1980 and its design aims to eliminate turtles, which are small values at
+the end of the list that slow down the sorting process in Bubble Sort.</p>
+<p>Time Complexity:</p>
 <ul>
-<li>Defined in <a href="https://github.com/ariskemper/algot/blob/b49f528/src/sort/intro/intro.ts#L1">sort/intro/intro.ts:1</a></li></ul></aside>
-<section class="tsd-panel-group tsd-index-group">
-<section class="tsd-panel tsd-index-panel">
-<h3 class="tsd-index-heading uppercase">Index</h3>
-<section class="tsd-index-section">
-<h3 class="tsd-index-heading">Type Aliases</h3>
-<div class="tsd-index-list"><a href="../types/sort_intro_intro.IntroSortFn.html" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2097152"></use></svg><span>Intro<wbr/>Sort<wbr/>Fn</span></a>
-</div></section>
-<section class="tsd-index-section">
-<h3 class="tsd-index-heading">Functions</h3>
-<div class="tsd-index-list"><a href="../functions/sort_intro_intro.introSort.html" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-64"></use></svg><span>intro<wbr/>Sort</span></a>
-</div></section></section></section></div>
+<li><p>Best Case: O (n log n) - This happens in scenarios where the input data
+is partially sorted. Combo Sort tends to have a slightly better best-case time
+complexity compared to Bubble Sort due to the use of a gap that can be larger
+than 1, thereby reducing the number of overall comparisons and swaps.</p>
+</li>
+<li><p>Average Case: O (n^2/2^p), where p is the number of increments The time
+complexity in the average case is hard to determine without specific details
+about the distribution of input data and is typically approximated because it
+depends on the &#39;shrink factor&#39; used to decrement the gap and how the data is
+arranged. The factor of 2^p in the denominator represents the number of
+passes, which is influenced by how quickly the gap size reduces.</p>
+</li>
+<li><p>Worst Case: O (n^2), This is often considered to be quadratic O (n^2)
+specially when dealing with reverse-ordered data or data with many duplicates.
+However, it&#39;s essential to note that Combo Sort is generally slightly more
+efficient than a traditional Bubble Sort due to its ability to move items
+quickly to their correct position in the early stages when the gap is large.</p>
+</li>
+</ul>
+<p>Space Complexity: O(1)</p>
+</div>
+<section class="tsd-panel">
+<h4>Type Parameters</h4>
+<ul class="tsd-type-parameter-list">
+<li>
+<h4><span class="tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h4></li></ul></section>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">arr</span>: <span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"><p>unsorted array of strings or numbers</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type tsd-kind-type-parameter">T</span><span class="tsd-signature-symbol">[]</span></h4><p>sorted array</p>
+
+<div class="tsd-comment tsd-typography">
+<h4>Function</h4><p>comboSort</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/ariskemper/algot/blob/b49f528/src/sort/combo/combo.ts#L35">sort/combo/combo.ts:35</a></li></ul></aside></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -46,27 +86,27 @@
 <div class="site-menu">
 <nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1"></use></svg><span>algot</span></a>
 <ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="..">
-<li><a href="benchmark_benchmark_sort.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>benchmark/benchmark-sort</a></li>
-<li><a href="benchmark_utils_array_generator.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>benchmark/utils/array-generator</a></li>
-<li><a href="benchmark_utils_contain.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>benchmark/utils/contain</a></li>
-<li><a href="benchmark_utils_range.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>benchmark/utils/range</a></li>
-<li><a href="index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>index</a></li>
-<li><a href="sort.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort</a></li>
-<li><a href="sort_bitonic_bitonic.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/bitonic/bitonic</a></li>
-<li><a href="sort_bogo_bogo.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/bogo/bogo</a></li>
-<li><a href="sort_bubble_bubble.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/bubble/bubble</a></li>
-<li><a href="sort_bucket_bucket.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/bucket/bucket</a></li>
-<li><a href="sort_cocktail_shaker_cocktail_shaker.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/cocktail-shaker/cocktail-shaker</a></li>
-<li><a href="sort_combo_combo.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/combo/combo</a></li>
-<li><a href="sort_counting_counting.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/counting/counting</a></li>
-<li><a href="sort_cycle_cycle.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/cycle/cycle</a></li>
-<li><a href="sort_gnome_gnome.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/gnome/gnome</a></li>
-<li><a href="sort_heap_heap.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/heap/heap</a></li>
-<li><a href="sort_insertion_insertion.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/insertion/insertion</a></li>
-<li><a href="sort_intro_intro.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/intro/intro</a></li>
-<li><a href="sort_merge_merge.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/merge/merge</a></li>
-<li><a href="sort_radix_radix.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/radix/radix</a></li>
-<li><a href="sort_random_quick_random_quick.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/random-quick/random-quick</a></li>
+<li><a href="../modules/benchmark_benchmark_sort.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>benchmark/benchmark-sort</a></li>
+<li><a href="../modules/benchmark_utils_array_generator.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>benchmark/utils/array-generator</a></li>
+<li><a href="../modules/benchmark_utils_contain.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>benchmark/utils/contain</a></li>
+<li><a href="../modules/benchmark_utils_range.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>benchmark/utils/range</a></li>
+<li><a href="../modules/index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>index</a></li>
+<li><a href="../modules/sort.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort</a></li>
+<li><a href="../modules/sort_bitonic_bitonic.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/bitonic/bitonic</a></li>
+<li><a href="../modules/sort_bogo_bogo.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/bogo/bogo</a></li>
+<li><a href="../modules/sort_bubble_bubble.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/bubble/bubble</a></li>
+<li><a href="../modules/sort_bucket_bucket.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/bucket/bucket</a></li>
+<li><a href="../modules/sort_cocktail_shaker_cocktail_shaker.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/cocktail-shaker/cocktail-shaker</a></li>
+<li><a href="../modules/sort_combo_combo.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/combo/combo</a></li>
+<li><a href="../modules/sort_counting_counting.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/counting/counting</a></li>
+<li><a href="../modules/sort_cycle_cycle.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/cycle/cycle</a></li>
+<li><a href="../modules/sort_gnome_gnome.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/gnome/gnome</a></li>
+<li><a href="../modules/sort_heap_heap.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/heap/heap</a></li>
+<li><a href="../modules/sort_insertion_insertion.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/insertion/insertion</a></li>
+<li><a href="../modules/sort_intro_intro.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/intro/intro</a></li>
+<li><a href="../modules/sort_merge_merge.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/merge/merge</a></li>
+<li><a href="../modules/sort_radix_radix.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/radix/radix</a></li>
+<li><a href="../modules/sort_random_quick_random_quick.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2"></use></svg>sort/random-quick/random-quick</a></li>
 <li>Loading...</li></ul></nav></div></div></div>
 <div class="tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" rel="noopener" target="_blank">TypeDoc</a></p></div>
