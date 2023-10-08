@@ -3,6 +3,7 @@ import { bogoSort, BogoSortFn } from './bogo/bogo'
 import { bubbleSort, BubbleSortFn } from './bubble/bubble'
 import { bucketSort, BucketSortFn } from './bucket/bucket'
 import { cocktailShakerSort, CocktailShakerSortFn } from './cocktail-shaker/cocktail-shaker'
+import { comboSort, ComboSortFn } from './combo/combo'
 import { countingSort, CountingSortFn } from './counting/counting'
 import { cycleSort, CycleSortFn } from './cycle/cycle'
 import { gnomeSort, GnomeSortFn } from './gnome/gnome'
@@ -31,6 +32,7 @@ export type SortFn =
   | CycleSortFn
   | IntroSortFn
   | BitonicSortFn
+  | ComboSortFn
 
 export type IntegerSortFn = CountingSortFn | RadixSortFn | BucketSortFn
 
@@ -40,6 +42,7 @@ export {
   bubbleSort,
   bucketSort,
   cocktailShakerSort,
+  comboSort,
   countingSort,
   cycleSort,
   gnomeSort,
