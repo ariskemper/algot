@@ -5,6 +5,7 @@ import { bucketSort, BucketSortFn } from './bucket/bucket'
 import { cocktailShakerSort, CocktailShakerSortFn } from './cocktail-shaker/cocktail-shaker'
 import { comboSort, ComboSortFn } from './combo/combo'
 import { countingSort, CountingSortFn } from './counting/counting'
+import { cubeSort, CubeSortFn } from './cube/cube'
 import { cycleSort, CycleSortFn } from './cycle/cycle'
 import { gnomeSort, GnomeSortFn } from './gnome/gnome'
 import { heapSort, HeapSortFn } from './heap/heap'
@@ -34,7 +35,7 @@ export type SortFn =
   | BitonicSortFn
   | ComboSortFn
 
-export type IntegerSortFn = CountingSortFn | RadixSortFn | BucketSortFn
+export type IntegerSortFn = CountingSortFn | RadixSortFn | BucketSortFn | CubeSortFn
 
 export {
   bitonicSort,
@@ -44,6 +45,7 @@ export {
   cocktailShakerSort,
   comboSort,
   countingSort,
+  cubeSort,
   cycleSort,
   gnomeSort,
   heapSort,

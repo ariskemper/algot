@@ -27,7 +27,7 @@
   - [x] [cocktailShakerSort](src/sort/cocktail-shaker/cocktail-shaker.ts)
   - [x] [comboSort](src/sort/combo/combo.ts)
   - [x] [countingSort](src/sort/counting/counting.ts)
-  - [ ] [cubeSort]
+  - [x] [cubeSort](src/sort/cube/cube.ts)
   - [x] [cycleSort](src/sort/cycle/cycle.ts)
   - [ ] [exchangeSort]
   - [x] [gnomeSort](src/sort/gnome/gnome.ts)
