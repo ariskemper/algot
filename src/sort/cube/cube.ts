@@ -38,7 +38,7 @@ export function cubeSort(arr: number[]): number[] {
   const range = maxValue - minValue + 1
 
   // Initialize the count array with zeros
-  const count: number[] = new Array(range).fill(0)
+  const count = new Array<number>(range).fill(0)
 
   // Count the occurrences of each element
   for (let i = 0; i < n; i++) {
@@ -47,7 +47,7 @@ export function cubeSort(arr: number[]): number[] {
   }
 
   // Create the sorted result array
-  const result: number[] = new Array(n)
+  const result = new Array(n) as number[]
   let resultIndex = 0
 
   for (let i = 0; i < range; i++) {

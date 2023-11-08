@@ -7,9 +7,17 @@
     "import"
   ],
   "extends":  [
-    "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier",
+    "plugin:prettier/recommended"
   ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": ["./tsconfig.json"]
+  },
   "rules": {
     "prettier/prettier": "warn",
     "semi": ["error", "never"],
@@ -17,6 +25,8 @@
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "import/first": "error",
-    "import/no-duplicates": "error"
+    "import/no-duplicates": "error",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-misused-promises": "off"
   }
 }
