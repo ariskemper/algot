@@ -34,7 +34,8 @@ module.exports = {
     'no-template-curly-in-string': 'error', // Disallow template literals placeholder syntax in regular strings
     'no-return-await': 'off', // Disable base rule for no return await
     '@typescript-eslint/return-await': 'error', // Allow return await
-    '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/consistent-type-imports': 'error', // Enforce consistent usage of type imports.
+    '@typescript-eslint/consistent-type-exports': 'error', // Enforce consistent usage of type exports.
 
     // Style
     'camelcase': 'error',
