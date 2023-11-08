@@ -125,6 +125,7 @@ void run({
   avg: true, // enable/disable avg column (default: true)
   json: false, // enable/disable json output (default: false)
   colors: true, // enable/disable colors (default: true)
+  // eslint-disable-next-line camelcase
   min_max: true, // enable/disable min/max column (default: true)
   collect: false, // enable/disable collecting returned values into an array during the benchmark (default: false)
   percentiles: true // enable/disable percentiles column (default: true)

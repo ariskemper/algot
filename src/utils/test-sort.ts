@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
 
 import { generateRandomizedIntegerArray } from '../benchmark/utils/array-generator'
-import { IntegerSortFn, SortFn } from '../sort'
+import type { IntegerSortFn, SortFn } from '../sort'
 
 export function testSort(fn: SortFn) {
   testSortStrings(fn)
