@@ -26,7 +26,6 @@
     "simple-import-sort/exports": "error",
     "import/first": "error",
     "import/no-duplicates": "error",
-    "@typescript-eslint/no-floating-promises": "off",
-    "@typescript-eslint/no-misused-promises": "off"
+    "@typescript-eslint/no-misused-promises": "error"
   }
 }

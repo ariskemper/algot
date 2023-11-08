@@ -121,7 +121,7 @@ group(`Sort Nearly Sorted Array ${size} of integer numbers`, () => {
   bench('treeSort', () => treeSort([...nearlySortedArray]))
 })
 
-run({
+void run({
   avg: true, // enable/disable avg column (default: true)
   json: false, // enable/disable json output (default: false)
   colors: true, // enable/disable colors (default: true)

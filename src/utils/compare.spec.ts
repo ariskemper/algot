@@ -3,8 +3,8 @@ import { describe, it } from 'node:test'
 
 import { compare } from './compare'
 
-describe('compare', () => {
-  it('should thrown an error', () => {
+void void describe('compare', () => {
+  void void it('should thrown an error', () => {
     assert.throws(() => compare<number | string>(1, 'banana'), new Error('Incompatible types for comparison'))
   })
 })
