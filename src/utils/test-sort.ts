@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
 
 import { generateRandomizedIntegerArray } from '../benchmark/utils/array-generator'
-import { IntegerSortFn, SortFn } from '../sort'
+import type { IntegerSortFn, SortFn } from '../sort'
 
 export function testSort(fn: SortFn) {
   testSortStrings(fn)
@@ -12,8 +12,8 @@ export function testSort(fn: SortFn) {
 }
 
 function testSortStrings(fn: SortFn): void {
-  describe(`${fn.name}`, () => {
-    it('It should sort strings', () => {
+  void describe(`${fn.name}`, () => {
+    void it('It should sort strings', () => {
       const result = fn(['fig', 'banana', 'apple', 'čoko', 'cherry', 'date', 'elderberry'])
 
       assert.deepStrictEqual(result, ['apple', 'banana', 'cherry', 'čoko', 'date', 'elderberry', 'fig'])
@@ -22,8 +22,8 @@ function testSortStrings(fn: SortFn): void {
 }
 
 export function testSortNegativeIntegers(fn: IntegerSortFn): void {
-  describe(`${fn.name}`, () => {
-    it('should sort negative and positive integer numbers', () => {
+  void describe(`${fn.name}`, () => {
+    void it('should sort negative and positive integer numbers', () => {
       const input = [5, -2, -1, 4, 6, 1, -3, 7, 10, 9, 8]
       const result = fn(input)
 
@@ -33,8 +33,8 @@ export function testSortNegativeIntegers(fn: IntegerSortFn): void {
 }
 
 export function testSortSingleInteger(fn: IntegerSortFn): void {
-  describe(`${fn.name}`, () => {
-    it('should return same array', () => {
+  void describe(`${fn.name}`, () => {
+    void it('should return same array', () => {
       const input = [5]
       const result = fn(input)
 
@@ -44,8 +44,8 @@ export function testSortSingleInteger(fn: IntegerSortFn): void {
 }
 
 export function testSortRandomIntegers(fn: IntegerSortFn, n: number = 10): void {
-  describe(`${fn.name}`, () => {
-    it(`should sort array of random integer numbers and size ${n}`, () => {
+  void describe(`${fn.name}`, () => {
+    void it(`should sort array of random integer numbers and size ${n}`, () => {
       let input = generateRandomizedIntegerArray(n, {
         min: 0,
         max: n

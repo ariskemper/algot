@@ -39,7 +39,7 @@ export function radixSort(arr: number[]): number[] {
 }
 
 function countingSortForRadix(arr: number[], position: number): number[] {
-  const count: number[] = Array(10).fill(0)
+  const count: number[] = Array<number>(10).fill(0)
 
   arr.forEach((num) => {
     const digit = getDigit(num, position)
@@ -50,7 +50,7 @@ function countingSortForRadix(arr: number[], position: number): number[] {
     count[i] += count[i - 1]
   }
 
-  const output = new Array(arr.length)
+  const output = new Array<number>(arr.length)
   arr
     .slice()
     .reverse()

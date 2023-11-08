@@ -3,8 +3,8 @@ import { describe, it } from 'node:test'
 
 import { isInGivenRange } from './range'
 
-describe('isInGivenRange function', () => {
-  it('should verify if all elements in the array are within the given range', () => {
+void describe('isInGivenRange function', () => {
+  void it('should verify if all elements in the array are within the given range', () => {
     const arr = [2, 4, 6, 8]
     const min = 1
     const max = 10

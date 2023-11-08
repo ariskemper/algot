@@ -26,7 +26,7 @@ export function countingSort(arr: number[]): number[] {
 
   const { min, max } = getMinMaxValue(arr)
 
-  const countArr = new Array(max - min + 1).fill(0)
+  const countArr = new Array<number>(max - min + 1).fill(0)
 
   arr.forEach((value) => {
     countArr[value - min]++
