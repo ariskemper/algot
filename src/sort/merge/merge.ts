@@ -23,7 +23,7 @@ import { compare } from '../../utils'
  * @param arr unsorted array
  * @returns sorted array
  */
-export function mergeSort<T extends number | string>(arr: T[]): T[] {
+export function mergeSort<TElement extends number | string>(arr: TElement[]): TElement[] {
   if (arr.length <= 1) {
     return arr
   }
@@ -35,8 +35,8 @@ export function mergeSort<T extends number | string>(arr: T[]): T[] {
   return merge(mergeSort(left), mergeSort(right))
 }
 
-function merge<T extends number | string>(left: T[], right: T[]): T[] {
-  const resultArray: T[] = []
+function merge<TElement extends number | string>(left: TElement[], right: TElement[]): TElement[] {
+  const resultArray: TElement[] = []
   let i = 0
   let j = 0
 

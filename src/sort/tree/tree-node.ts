@@ -1,13 +1,13 @@
-export class TreeNode<T extends number | string> {
-  value: T
-  left: TreeNode<T> | null = null
-  right: TreeNode<T> | null = null
+export class TreeNode<TElement extends number | string> {
+  value: TElement
+  left: TreeNode<TElement> | null = null
+  right: TreeNode<TElement> | null = null
 
-  constructor(value: T) {
+  constructor(value: TElement) {
     this.value = value
   }
 
-  insert(value: T, cmpFunc: (a: T, b: T) => number) {
+  insert(value: TElement, cmpFunc: (a: TElement, b: TElement) => number) {
     if (cmpFunc(value, this.value) < 0) {
       if (this.left === null) {
         this.left = new TreeNode(value)
@@ -23,7 +23,7 @@ export class TreeNode<T extends number | string> {
     }
   }
 
-  inOrderTraversal(arr: T[]) {
+  inOrderTraversal(arr: TElement[]) {
     if (this.left !== null) {
       this.left.inOrderTraversal(arr)
     }

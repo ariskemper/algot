@@ -29,7 +29,7 @@ import { TreeNode } from './tree-node'
  * @param arr unsorted array
  * @returns sorted array
  */
-export function treeSort<T extends number | string>(arr: T[]): T[] {
+export function treeSort<TElement extends number | string>(arr: TElement[]): TElement[] {
   if (arr.length === 0) return []
 
   const root = new TreeNode(arr[0])
@@ -38,7 +38,7 @@ export function treeSort<T extends number | string>(arr: T[]): T[] {
     root.insert(arr[i], compare)
   }
 
-  const sortedArray: T[] = []
+  const sortedArray: TElement[] = []
   root.inOrderTraversal(sortedArray)
 
   return sortedArray

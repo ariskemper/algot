@@ -23,7 +23,7 @@ import { compare, swap } from '../../utils'
  * @param arr unsorted array
  * @returns sorted array
  */
-export function cocktailShakerSort<T extends string | number>(arr: T[]): T[] {
+export function cocktailShakerSort<TElement extends string | number>(arr: TElement[]): TElement[] {
   let start = 0
   let end = arr.length - 1
 
@@ -38,7 +38,12 @@ export function cocktailShakerSort<T extends string | number>(arr: T[]): T[] {
   return arr
 }
 
-function traverse<T extends string | number>(arr: T[], start: number, end: number, direction: number): T[] {
+function traverse<TElement extends string | number>(
+  arr: TElement[],
+  start: number,
+  end: number,
+  direction: number
+): TElement[] {
   if (direction === 1) {
     for (let i = start; i < end; i++) {
       if (compare(arr[i], arr[i + 1]) > 0) {

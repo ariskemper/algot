@@ -29,7 +29,7 @@ import { compare, swap } from '../../utils'
  * @param arr array which should be sorted
  * @returns sorted array
  */
-export function bubbleSort<T extends string | number>(arr: T[]): T[] {
+export function bubbleSort<TElement extends string | number>(arr: TElement[]): TElement[] {
   let len = arr.length
   let swapped: boolean
 

@@ -28,7 +28,7 @@ import { compare } from '../../utils'
  * @param arr unsorted array
  * @returns sorted array
  */
-export function cycleSort<T extends number | string>(arr: T[]): T[] {
+export function cycleSort<TElement extends number | string>(arr: TElement[]): TElement[] {
   const len = arr.length
 
   if (len === 0) return arr

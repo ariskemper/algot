@@ -22,7 +22,7 @@ import { swap } from '../../utils/swap'
  * @param arr passed array of string or numbers
  * @returns return sorted array
  */
-export function gnomeSort<T extends number | string>(arr: T[]): T[] {
+export function gnomeSort<TElement extends number | string>(arr: TElement[]): TElement[] {
   const l = arr.length
   let index = 0
 

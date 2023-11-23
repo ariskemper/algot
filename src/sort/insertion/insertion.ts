@@ -25,11 +25,11 @@ import { compare, swap } from '../../utils'
  * @param high ending index
  * @returns sorted array
  */
-export function insertionSort<T extends number | string>(
-  arr: T[],
+export function insertionSort<TElement extends number | string>(
+  arr: TElement[],
   low: number = 0,
   high: number = arr.length - 1
-): T[] {
+): TElement[] {
   for (let i = low + 1; i <= high; i++) {
     const key = arr[i]
     let j = i - 1

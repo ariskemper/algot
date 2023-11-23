@@ -25,7 +25,11 @@ import { compare, swap } from '../../utils'
  * @param n number of elements in heap
  * @returns sorted array
  */
-export function heapSort<T extends number | string>(arr: T[], low: number = 0, n: number = arr.length): T[] {
+export function heapSort<TElement extends number | string>(
+  arr: TElement[],
+  low: number = 0,
+  n: number = arr.length
+): TElement[] {
   // Build heap (rearrange array)
   for (let i = Math.floor(n / 2) - 1; i >= low; i--) {
     heapify(arr, n, i)
@@ -43,7 +47,7 @@ export function heapSort<T extends number | string>(arr: T[], low: number = 0, n
   return arr
 }
 
-function heapify<T extends number | string>(arr: T[], n: number, i: number) {
+function heapify<TElement extends number | string>(arr: TElement[], n: number, i: number) {
   let largest = i // Initialize largest as root
   const l = 2 * i + 1 // left = 2*i + 1
   const r = 2 * i + 2 // right = 2*i + 2

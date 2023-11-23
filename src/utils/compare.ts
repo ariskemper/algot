@@ -1,4 +1,4 @@
-export function compare<SortT>(a: SortT, b: SortT): number {
+export function compare<TSort>(a: TSort, b: TSort): number {
   if (typeof a === 'string' && typeof b === 'string') {
     return a.localeCompare(b)
   } else if (typeof a === 'number' && typeof b === 'number') {

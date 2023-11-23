@@ -27,11 +27,11 @@ import { compare, swap } from '../../utils'
  * @param right
  * @returns sorted array of elements (may be strings or numbers)
  */
-export function randomQuickSort<T extends number | string>(
-  arr: T[],
+export function randomQuickSort<TElement extends number | string>(
+  arr: TElement[],
   left: number = 0,
   right: number = arr.length - 1
-): T[] {
+): TElement[] {
   if (left < right) {
     const pivotIndex = partition(arr, left, right)
     randomQuickSort(arr, left, pivotIndex - 1)
@@ -40,7 +40,7 @@ export function randomQuickSort<T extends number | string>(
   return arr
 }
 
-function partition<T extends number | string>(arr: T[], left: number, right: number): number {
+function partition<TElement extends number | string>(arr: TElement[], left: number, right: number): number {
   const pivotIndex = Math.floor(Math.random() * (right - left + 1)) + left
   const pivot = arr[pivotIndex]
   swap(arr, right, pivotIndex)

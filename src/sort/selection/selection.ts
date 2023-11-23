@@ -24,7 +24,7 @@ import { compare, swap } from '../../utils'
  * @param arr array which should be sorted
  * @returns sorted array
  */
-export function selectionSort<T extends number | string>(arr: T[]): T[] {
+export function selectionSort<TElement extends number | string>(arr: TElement[]): TElement[] {
   const len = arr.length
 
   for (let i = 0; i < len - 1; i++) {

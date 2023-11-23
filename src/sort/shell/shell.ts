@@ -21,7 +21,7 @@ import { compare, swap } from '../../utils'
  * @param arr unsorted array
  * @returns sorted array
  */
-export function shellSort<T extends number | string>(arr: T[]): T[] {
+export function shellSort<TElement extends number | string>(arr: TElement[]): TElement[] {
   const size = arr.length
 
   for (let gap = Math.floor(size / 2); gap > 0; gap = Math.floor(gap / 2)) {
