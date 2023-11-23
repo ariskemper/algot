@@ -42,6 +42,14 @@ module.exports = {
     'prettier/prettier': 'warn',
     'semi': ['error', 'never'],
     'quotes': [2, 'single'],
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'typeParameter',
+        format: ['PascalCase'],
+        custom: { regex: '^T[A-Z]', match: true },
+      },
+    ],
 
     // ES6+
     'prefer-const': 'error', // Suggest using const

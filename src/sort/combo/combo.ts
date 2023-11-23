@@ -32,7 +32,7 @@ import { compare, swap } from '../../utils'
  * @param arr unsorted array of strings or numbers
  * @returns sorted array
  */
-export function comboSort<T extends string | number>(arr: T[]): T[] {
+export function comboSort<TElement extends string | number>(arr: TElement[]): TElement[] {
   let gap = arr.length
   if (gap <= 1) return arr
   let swapped = false

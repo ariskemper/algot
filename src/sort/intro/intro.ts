@@ -28,14 +28,14 @@ import { insertionSort } from '../insertion/insertion'
  * @param arr unsorted array
  * @returns sorted array
  */
-export function introSort<T extends string | number>(arr: T[]): T[] {
+export function introSort<TElement extends string | number>(arr: TElement[]): TElement[] {
   const copyArr = [...arr]
   sort(copyArr)
   return copyArr
 }
 
-function sort<T extends string | number>(
-  arr: T[],
+function sort<TElement extends string | number>(
+  arr: TElement[],
   low: number = 0,
   high: number = arr.length - 1,
   depthLimit = 2 * Math.floor(Math.log2(arr.length))

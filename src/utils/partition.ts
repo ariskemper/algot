@@ -1,6 +1,6 @@
 import { swap } from './swap'
 
-export function partition<T>(arr: T[], low: number, high: number): number {
+export function partition<TElement>(arr: TElement[], low: number, high: number): number {
   const pivot = arr[high]
   let i = low
 
