@@ -1,10 +1,12 @@
-# Algorithms in TypeScript
-
 [![TypeScript][typescript-badge]][typescript-url]
 
 [![CI][build-badge]][build-url]
 [![codecov][codecov-badge]][codecov-url]
 [![Known Vulnerabilities][snyk-badge]][snyk-url]
+
+<p align="center"><img src="./logo_algot.jpg"></p>
+
+# Algorithms in TypeScript
 
 ## Installing
 
